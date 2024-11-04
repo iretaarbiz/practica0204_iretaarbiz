@@ -5,6 +5,7 @@ Al final el programa debe mostrar por pantalla las asignaturas que el usuario ti
 
 listaNombres = []
 listaNotas = []
+borrar = []
 cont = 0
 x = int(input("Cuantas asignaturas tiene tu curso: \n"))
 for i in range(x):
@@ -17,9 +18,10 @@ for j in range(len(listaNombres)):
     print("Introduce la nota de la asignatura", listaNombres[j])
     b = int(input())
     listaNotas.append(b)
-for k in range(len(listaNombres)):
+for k in range(len(listaNotas)):
     if listaNotas[k] >= 5:
-        listaNombres.remove(listaNombres[k - cont])
-        cont =+ 1
+        borrar.append(listaNombres[k])
+for l in(borrar):
+        listaNombres.remove(l)
 print(listaNombres)
     
